@@ -1,1 +1,1 @@
-npm install && npm install forever
+yum install httpd

@@ -1,1 +1,1 @@
-sudo forever start server.js
+service httpd start

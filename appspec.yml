@@ -1,7 +1,7 @@
 version: 0.0
 os: linux
 files:
-  - source: dist/demo-deployment/index.html
+  - source: dist/demo-deployment
     destination: /var/www/html/
 hooks:
   BeforeInstall:

@@ -5,11 +5,11 @@ const { dirname } = require('path');
 const app = express();
 
 //Set the base path to the angular-test dist folder
-app.use(express.static(path.join(__dirname, 'dist/demo-deployment')));
+app.use(express.static(path.join(__dirname, '/var/www/html/')));
 
 //Any routes will be redirected to the angular app
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, 'dist/demo-deployment/index.html'));
+    res.sendFile(path.join(__dirname, '/var/www/html/index.html'));
 });
 
 //Starting server on port 3000
