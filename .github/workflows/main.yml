@@ -3,6 +3,7 @@ name: Angular Demo
 on:
   push:
     branches:
+    - main
     - release
 
 jobs:
