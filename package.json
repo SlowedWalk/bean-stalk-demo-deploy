@@ -1,4 +1,9 @@
 {
+  "scripts": {
+    "ng": "ng",
+    "start": "node server.js",
+    "build:prod": "ng build --configuration=production"
+  },
   "dependencies": {
     "express": "^4.18.2",
     "path": "^0.12.7"
