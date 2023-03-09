@@ -1,1 +1,1 @@
-service httpd start
+npm i && sudo forever start server.js
