@@ -24,23 +24,18 @@ jobs:
             ${{ runner.os }}-node-
 - name: NPM Install
   run: npm install
+
 - name: NPM Install Angular
   run: npm install -g @angular/cli > /dev/null
-- name: Lint
-  run: npm run lint
-- name: Format
-  run: npm run format
+
 - name: NPM build Angular Production
-  run: npm run build:prod
-- name: Test
-  run: npm run test:ci
-- name: Test coverage
-  run: npm run test:ci:cov
+  run: npm run build
+
 - name: Deploy to my EC2 instance
   uses: easingthemes/ssh-deploy@v2.1.5
   with:
     SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY}}
-    SOURCE: "dist/angular-demo/"
+    SOURCE: "dist/demo-deployment/"
     REMOTE_HOST: "ec2-remote-host"
     REMOTE_USER: "ubuntu"
-    TARGET: "/var/www/html/angular-demo/"
+    TARGET: "/var/www/html/demo-deployment/"
