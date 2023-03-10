@@ -1,4 +1,4 @@
-name: Angular Demo
+name: Angular Demo 📦️
 
 on:
   push:
@@ -29,10 +29,10 @@ jobs:
         with:
           switches: -avzr --delete
           path: ./*
-          remote_path: /var/www/my-app/
+          remote_path: ~/my-app/
           remote_host: ec2-44-214-73-219.compute-1.amazonaws.com
           remote_user: ubuntu
           remote_key: "${{ secrets.SSH_PRIVATE_KEY }}"
 
-      - name: Deployed!
+      - name: App Deployed! 🚀
         run: echo App deployed to ELB
