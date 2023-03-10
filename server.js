@@ -9,7 +9,7 @@ app.use(express.static(path.join(__dirname, '/var/www/html/')));
 
 //Any routes will be redirected to the angular app
 app.get('*', function(req, res) {
-    res.sendFile(path.join(__dirname, '/var/www/html/index.html'));
+    res.sendFile(path.join(__dirname, '/index.html'));
 });
 
 //Starting server on port 3000
